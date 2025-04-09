@@ -1,0 +1,109 @@
+.header {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, sans-serif;
+  }
+
+  .logoText{
+    font-family: Inter;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    margin-left: 80px;
+  }
+
+  .navbarMenu{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+
+  .navbarMenu2{
+    display: flex;
+    background-color: rgb(212, 240, 230);
+    padding: 0 20px;
+    margin: 15px 0;
+  }
+  
+  .topStrip {
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-around;
+    padding: 4px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 70px;
+    background: white;
+  }
+  
+  .logo img {
+    display: block;
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 28px;
+  }
+  
+  .navLinks a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 18px;
+  }
+
+  .hamburgerMenu {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 16px 20px;
+    }
+
+    .logo{
+      position: absolute;
+      left: 60px;
+    }
+
+    .hamburgerMenu {
+      display: block;
+    }
+  
+    .logoText {
+      font-size: 24px;
+      margin-left: 0;
+    }
+  
+    .icons {
+      gap: 12px;
+    }
+  
+    .navbarMenu {
+      display: none;
+    }
+  
+    .navbarMenu2 nav {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .navLinks a {
+      font-size: 14px;
+      padding: 6px 0;
+    }
+  }
+  

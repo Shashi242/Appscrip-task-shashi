@@ -1,0 +1,285 @@
+.productImage {
+    width: 150px !important;
+    height: 150px !important;
+    /* object-fit: cover; */
+    display: block;
+    margin: 0 auto;
+  }  
+
+.pageContainer {
+    font-family: Arial, sans-serif;
+    padding: 30px 70px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #555;
+    max-width: 600px;
+    margin: 10px auto 0;
+  }
+  
+  .mainSection {
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid #ccc;
+    padding: 15px 0;
+    /* margin-top: 5px; */
+  }
+  
+  .sidebar {
+    flex: 1;
+    max-width: 200px;
+    border-right: 1px solid #ccc;
+    padding-right: 15px;
+    font-size: 14px;
+  }
+  
+  .filterHeading {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .productSection {
+    flex: 4;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .controls input,
+  .controls select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .toggleButton {
+    font-family: 'Adobe Caslon Pro', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: right;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .label {
+    text-decoration: underline;
+  }
+  
+  .arrow {
+    text-decoration: none;
+    font-size: 21px;
+    margin-bottom: 5px;
+  } 
+  
+  .itemCount {
+    font-family: Simplon Norm;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: black;
+    margin-right: 40px;
+  }
+
+  .noteContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+  }
+  
+  .heartIcon {
+    cursor: pointer;
+    font-size: 26px;
+    color: rgb(182, 178, 178);
+    /* transition: color 0.3s ease; */
+    user-select: none;
+    margin-right: 5px;
+  }
+  
+  .liked {
+    color: red;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .controls {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .controls input {
+      flex: 2;
+      margin-right: 10px;
+    }
+  
+    .controls select {
+      flex: 1;
+    }
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    text-align: center;
+    /* border: solid 1px #ccc; */
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .name {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .note {
+    font-size: 12px;
+    color: #888;
+  }
+  
+
+  .breadcrumbs {
+    font-size: 10px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+  
+  .mobileFilterBar {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    /* margin-bottom: 10px; */
+    width: 100%;
+  }
+  
+  .filterButton,
+  .recommendedButton {
+    flex: 1;
+    font-weight: bold;
+    font-size: 13px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .filterButton {
+    border-right: 1px solid #ccc;
+  }
+  
+  .recommendedButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .modalContent {
+    background: #fff;
+    padding: 20px;
+    padding-right: 0;
+    /* width: 90%; */
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    position: relative;
+    z-index: 10000; /* Make sure it's above */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  }  
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    font-size: 24px;
+    cursor: pointer;
+  }  
+  
+  .closeButton:hover {
+    color: #000;
+  }
+  
+  @media (min-width: 768px) {
+    .mobileFilterBar,
+    .breadcrumbs {
+      display: none;
+    }
+  } 
+  
+  @media (max-width: 768px) {
+    .toggleButton{
+      display: none;
+    }
+    .recommendedButton {
+      padding-left: 20px;
+    }
+
+    .filterSideBar{
+      display: none !important;
+    }
+
+    .controls select{
+      display: none;
+    }
+
+    .pageContainer{
+      padding: 30px 20px;
+    }
+  } 

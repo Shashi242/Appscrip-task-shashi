@@ -1,0 +1,54 @@
+.sidebar {
+    width: 250px;
+    padding: 20px 0;
+    border-right: 1px solid #ddd;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .section {
+    margin-bottom: 15px;
+    border-bottom: solid 1px #ddd;
+    padding: 8px 0;
+  }
+  
+  .summary {
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .option, .unselect {
+    font-size: 12px;
+    color: #777;
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .checkbox {
+    font-size: 12px;
+    margin-left: 10px;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .active {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .sidebar.open {
+      left: 0;
+    }
+  }
+  
