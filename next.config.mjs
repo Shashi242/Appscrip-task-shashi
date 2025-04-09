@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const { withNetlify } = require('@netlify/next');
+const nextConfig = withNetlify({
   reactStrictMode: true,
   images: {
     domains: ['fakestoreapi.com'],
   },
-};
+});
 
 export default nextConfig;
