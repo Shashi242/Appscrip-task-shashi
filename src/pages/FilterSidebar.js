@@ -1,9 +1,8 @@
 import styles from '../styles/FilterSidebar.module.css';
 
-export default function FilterSidebar({ filter, toggleFilter, setAllFilters }) {
-
-  const allSelected = filter.men && filter.women && filter.kids;
-  const noneSelected = !filter.men && !filter.women && !filter.kids;
+export default function FilterSidebar({ filter = {}, toggleFilter, setAllFilters }) {
+  const allSelected = filter?.men && filter?.women && filter?.kids;
+  const noneSelected = !filter?.men && !filter?.women && !filter?.kids;
 
   const handleSelectAll = () => {
     setAllFilters({ men: true, women: true, kids: true });
@@ -39,7 +38,7 @@ export default function FilterSidebar({ filter, toggleFilter, setAllFilters }) {
             <label className={styles.checkbox}>
               <input
                 type="checkbox"
-                checked={filter.men}
+                checked={filter?.men || false}
                 onChange={() => toggleFilter('men')}
               />{' '}
               Men
@@ -50,7 +49,7 @@ export default function FilterSidebar({ filter, toggleFilter, setAllFilters }) {
             <label className={styles.checkbox}>
               <input
                 type="checkbox"
-                checked={filter.women}
+                checked={filter?.women || false}
                 onChange={() => toggleFilter('women')}
               />{' '}
               Women
@@ -61,7 +60,7 @@ export default function FilterSidebar({ filter, toggleFilter, setAllFilters }) {
             <label className={styles.checkbox}>
               <input
                 type="checkbox"
-                checked={filter.kids}
+                checked={filter?.kids || false}
                 onChange={() => toggleFilter('kids')}
               />{' '}
               Baby & Kids
@@ -70,6 +69,7 @@ export default function FilterSidebar({ filter, toggleFilter, setAllFilters }) {
         </details>
       </div>
 
+      {/* Other sections remain unchanged */}
       <details className={styles.section}>
         <summary className={styles.summary}>OCCASION</summary>
         <div className={styles.option}>All</div>
