@@ -47,14 +47,14 @@ export default function ProductsPage() {
 
     const filteredProducts = products.filter(p => {
         const matchesSearch = p.title.toLowerCase().includes(searchTerm.toLowerCase());
-        const anyFilterSelected = Object.values(filter).some(Boolean);
+        const anyFilterSelected = filter ? Object.values(filter).some(Boolean) : false;
         const category = p.category.toLowerCase();
         const matchesFilter = !anyFilterSelected ||
-            (filter.men && category.includes('men')) ||
-            (filter.women && category.includes('women')) ||
-            (filter.kids && category.includes('kid'));
+            (filter?.men && category.includes('men')) ||
+            (filter?.women && category.includes('women')) ||
+            (filter?.kids && category.includes('kid'));
         return matchesSearch && matchesFilter;
-    });
+    });    
 
     return (
         <>
